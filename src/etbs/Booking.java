@@ -1,19 +1,16 @@
 package etbs;
 
 public class Booking implements Bookable {
-
-    private static int counter = 1;
-
-    private int bookingId;
+    private String bookingId;
     private User user;
     private Event event;
     private Ticket ticket;
 
-    public Booking(User user, Event event, int seatNumber, double price) {
-        this.bookingId = counter++;
+    public Booking(String bookingId, User user, Event event, int seatNumber, double price) {
+        this.bookingId = bookingId;
         this.user = user;
         this.event = event;
-        this.ticket = new Ticket(bookingId, seatNumber, price);
+        this.ticket = new Ticket(Integer.parseInt(bookingId), seatNumber, price);
     }
 
     @Override
@@ -31,7 +28,7 @@ public class Booking implements Bookable {
         System.out.println("Booking cancelled");
     }
 
-    public int getBookingId() {
+    public String getBookingId() {
         return bookingId;
     }
 

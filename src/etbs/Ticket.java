@@ -1,7 +1,7 @@
 package etbs;
 
 public class Ticket {
-    private int ticketId;   // ✅ THIS WAS MISSING
+    private int ticketId;
     private int seatNumber;
     private double price;
 
