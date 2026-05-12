@@ -8,7 +8,7 @@ public class BookingApplication {
         EventCSVManager eventManager = new EventCSVManager("events.csv");
         BookingCSVManager bookingManager = new BookingCSVManager("bookings.csv");
 
-        User user = new User("Balu", 12345, 19);
+        User user = new User("Balu", 12345L, 19);
         List<Event> events = eventManager.loadEvents();
 
         System.out.println("Available Events:");
@@ -39,7 +39,7 @@ public class BookingApplication {
             bookingManager.addBooking(bookingId, user.getName(), selectedEvent.getEventId(), quantity, total);
             eventManager.saveEvents(events);
 
-            System.out.println("\n--- Booking Details ---");
+            System.out.println("\n    Booking Details    ");
             System.out.println("Booking ID: " + booking.getBookingId());
             System.out.println("User: " + booking.getUser().getName());
             System.out.println("Event: " + booking.getEvent().getEventName());

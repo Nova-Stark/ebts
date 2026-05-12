@@ -2,10 +2,10 @@ package etbs;
 
 public class User {
     private String name;
-    private int phone;
+    private long phone;
     private int age;
 
-    public User(String name, int phone, int age) {
+    public User(String name, long phone, int age) {
         this.name = name;
         this.phone = phone;
         this.age = age;
@@ -15,7 +15,7 @@ public class User {
         return name;
     }
 
-    public int getPhone() {
+    public long getPhone() {
         return phone;
     }
 
